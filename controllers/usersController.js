@@ -1,4 +1,4 @@
-// controllers/usersController.js
+//controllers/usersController.js
 import express from 'express';
 import bcrypt from 'bcrypt';
 import { getUsers, findUser, addUser } from '../service/usersService.js';
