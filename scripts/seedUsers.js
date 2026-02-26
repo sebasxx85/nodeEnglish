@@ -15,7 +15,7 @@ const User = mongoose.model('User', userSchema);
 
 mongoose.connect(MONGO_URI)
   .then(async () => {
-    console.log('✅ Conectado a MongoDB');
+    console.log('Conectado a MongoDB');
 
     await User.deleteMany(); // Limpia la colección si ya hay datos
     const inserted = await User.insertMany(users);
@@ -24,6 +24,6 @@ mongoose.connect(MONGO_URI)
     mongoose.connection.close();
   })
   .catch(err => {
-    console.error('❌ Error al conectar o insertar:', err);
+    console.error('Error al conectar o insertar:', err);
     mongoose.connection.close();
   });
